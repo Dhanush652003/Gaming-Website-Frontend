@@ -1,31 +1,63 @@
-.aboutus-container {
-  position: relative;
-  background-color: #101b26;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: rgb(28, 27, 53);
 }
 
-.header-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10; 
+.aboutus-container {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .image-container {
   width: 100%;
-  height: 50vh; 
+  height: 25vh;
 }
 
-.custom-img {
+.joystick-img {
   width: 100%;
-  height: 100%;
+  height: 25%;
   object-fit: cover;
+}
+
+.text-white {
+  color: white;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
   border: none;
+}
+
+.container {
+  flex: 1;
+  padding-top: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .logo-img {
   max-width: 100%;
-  margin-top: 15%;
   height: auto;
-  border: none;
+  margin-top: 20px;
+}
+
+.justified-text {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .flex-md-row-reverse {
+    flex-direction: column-reverse;
+  }
 }
