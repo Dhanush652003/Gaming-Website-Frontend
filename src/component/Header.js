@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 import './Header.css'; 
 
 export default function ButtonAppBar() {
@@ -50,38 +51,48 @@ export default function ButtonAppBar() {
                 },
               }}
             >
-              <MenuItem onClick={handleClose}>About</MenuItem>
-              <MenuItem onClick={handleClose}>Gallery</MenuItem>
+              <MenuItem onClick={handleClose}>Home Page</MenuItem>
+              <MenuItem onClick={handleClose}>About us</MenuItem>
               <MenuItem onClick={handleClose}>News</MenuItem>
               <MenuItem onClick={handleClose}>Contact Us</MenuItem>
             </Menu>
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Link to ='/'>
             <Button
-              color="inherit"
-              onClick={() => console.log('About clicked')}
               className="button-hover" 
+              style={{
+                color:'white'
+              }}
             >
-              About
+              Home Page
             </Button>
+            </Link>
+            <Link to ='/about'>
             <Button
-              color="inherit"
-              onClick={() => console.log('Gallery clicked')}
               className="button-hover" 
+              style={{
+                color:'white'
+              }}
             >
-              Gallery
+              About us
             </Button>
+            </Link>
+            <Link to ='/news'>
             <Button
-              color="inherit"
-              onClick={() => console.log('News clicked')}
               className="button-hover" 
+              style={{
+                color:'white'
+              }}
             >
               News
             </Button>
+            </Link>
             <Button
-              color="inherit"
-              onClick={() => console.log('Contact Us clicked')}
               className="button-hover" 
+              style={{
+                color:'white'
+              }}
             >
               Contact Us
             </Button>

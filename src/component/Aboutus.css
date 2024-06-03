@@ -1,0 +1,31 @@
+.aboutus-container {
+  position: relative;
+  background-color: #101b26;
+}
+
+.header-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; 
+}
+
+.image-container {
+  width: 100%;
+  height: 50vh; 
+}
+
+.custom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+
+.logo-img {
+  max-width: 100%;
+  margin-top: 15%;
+  height: auto;
+  border: none;
+}
