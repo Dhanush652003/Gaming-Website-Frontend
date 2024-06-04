@@ -5,28 +5,16 @@ class GameService {
     return axios.get('http://localhost:8080/aboutus');
   }
 
-  getGame1Text() {
-    return axios.get('http://localhost:8080/game1');
+  getGameText() {
+    return axios.get('http://localhost:8080/game');
   }
 
-  getGame2Text() {
-    return axios.get('http://localhost:8080/game2');
+  getUpdateText(){
+    return axios.get('http://localhost:8080/update');
   }
 
-  getGame3Text() {
-    return axios.get('http://localhost:8080/game3');
-  }
-
-  getUpdate1Text(){
-    return axios.get('http://localhost:8080/update1');
-  }
-
-  getUpdate2Text(){
-    return axios.get('http://localhost:8080/update2');
-  }
-
-  getUpdate3Text(){
-    return axios.get('http://localhost:8080/update3');
+  contactus(formData){
+    return axios.post('http://localhost:8080/contactus',formData)
   }
 }
 

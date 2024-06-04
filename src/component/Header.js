@@ -51,10 +51,10 @@ export default function ButtonAppBar() {
                 },
               }}
             >
-              <MenuItem onClick={handleClose}>Home Page</MenuItem>
-              <MenuItem onClick={handleClose}>About us</MenuItem>
-              <MenuItem onClick={handleClose}>News</MenuItem>
-              <MenuItem onClick={handleClose}>Contact Us</MenuItem>
+              <Link to = '/'><MenuItem>Home Page</MenuItem> </Link>
+              <Link to = '/about'><MenuItem>About us</MenuItem></Link>
+              <Link to = '/news'><MenuItem>News</MenuItem></Link>
+              <Link to = '/feedback'><MenuItem>Contact Us</MenuItem></Link>
             </Menu>
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -88,14 +88,16 @@ export default function ButtonAppBar() {
               News
             </Button>
             </Link>
+            <Link to='/feedback'>
             <Button
               className="button-hover" 
               style={{
                 color:'white'
               }}
             >
-              Contact Us
+              FeedBack
             </Button>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>

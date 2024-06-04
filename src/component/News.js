@@ -11,14 +11,12 @@ import Footer from './Footer';
 import './News.css';
 
 const News = () => {
-  const [game1Text, setGame1Text] = useState('');
-  const [game2Text, setGame2Text] = useState('');
-  const [game3Text, setGame3Text] = useState('');
+  const [gameText, setGameText] = useState('');
+  const [updateText, setUpdateText] = useState('');
 
   useEffect(() => {
-    gameService.getGame1Text().then(response => setGame1Text(response.data));
-    gameService.getGame2Text().then(response => setGame2Text(response.data));
-    gameService.getGame3Text().then(response => setGame3Text(response.data));
+    gameService.getGameText().then(response => setGameText(response.data));
+    gameService.getUpdateText().then(response => setUpdateText(response.data));
   }, []);
 
   return (
@@ -35,7 +33,7 @@ const News = () => {
             <img src={game1} alt="Game 1" className="img-fluid" />
           </div>
           <div className="col-md-6 text-white d-flex align-items-center">
-            <p>{game1Text}</p>
+            <p>{gameText}</p>
           </div>
         </div>
         <div className="row mb-4 flex-md-row-reverse">
@@ -43,7 +41,7 @@ const News = () => {
             <img src={game2} alt="Game 2" className="img-fluid" />
           </div>
           <div className="col-md-6 text-white d-flex align-items-center">
-            <p>{game2Text}</p>
+            <p>{gameText}</p>
           </div>
         </div>
         <div className="row mb-4">
@@ -51,7 +49,7 @@ const News = () => {
             <img src={game3} alt="Game 3" className="img-fluid" />
           </div>
           <div className="col-md-6 text-white d-flex align-items-center">
-            <p>{game3Text}</p>
+            <p>{gameText}</p>
           </div>
         </div>
       </div>
@@ -65,7 +63,7 @@ const News = () => {
             <img src={update1} alt="update 1" className="img-fluid-update" />
           </div>
           <div className="col-md-6 text-white d-flex align-items-center">
-            <p>{game1Text}</p>
+            <p>{updateText}</p>
           </div>
         </div>
         <div className="row mb-4 ">
@@ -73,7 +71,7 @@ const News = () => {
             <img src={update2} alt="update 2" className="img-fluid-update" />
           </div>
           <div className="col-md-6 text-white d-flex align-items-center">
-            <p>{game2Text}</p>
+            <p>{updateText}</p>
           </div>
         </div>
         <div className="row mb-4">
@@ -81,7 +79,7 @@ const News = () => {
             <img src={update3} alt="update 3" className="img-fluid-update" />
           </div>
           <div className="col-md-6 text-white d-flex align-items-center">
-            <p>{game3Text}</p>
+            <p>{updateText}</p>
           </div>
         </div>
       </div>
