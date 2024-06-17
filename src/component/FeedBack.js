@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import joystick from './Asserts/black.gif';
-import service from '../service/GameService';
 import { TextField, Button, Container, Box, Typography } from '@mui/material';
 
 const Contactus = () => {
@@ -19,20 +18,8 @@ const Contactus = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await service.contactus(formData);
-      console.log('Form submitted successfully:', response.data);
-      window.alert("Thank You for your FeedBack");
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      });
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    }
+  const handleSubmit = () => {
+    console.log("form submitted")
   };
 
   return (

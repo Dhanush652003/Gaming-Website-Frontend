@@ -1,5 +1,5 @@
 import React from 'react';
-import background1 from './Asserts/6.gif';
+import background1 from './Asserts/fortnite.gif';
 import Header from './Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Homepage.css'; 

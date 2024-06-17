@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from './Header';
 import game1 from './Asserts/img11.jpg';
 import game2 from './Asserts/img12.jpg';
@@ -6,18 +6,13 @@ import game3 from './Asserts/img15.jpg';
 import update1 from './Asserts/img14.jpg';
 import update2 from './Asserts/img13.jpg';
 import update3 from './Asserts/img10.jpg';
-import gameService from '../service/GameService';
 import Footer from './Footer';
 import './News.css';
 
 const News = () => {
-  const [gameText, setGameText] = useState('');
-  const [updateText, setUpdateText] = useState('');
+  const gameText = "The peace of Elysium is shattered when the malevolent Shadow Lord emerges from the Abyss, threatening to engulf the world in eternal darkness. As the chosen guardian, you must harness the power of the Eclipse, a legendary force that can turn the tide of battle. Alongside a band of diverse and unforgettable allies, you will embark on a quest to restore balance and prevent the Shadow Lord from achieving his sinister goals.";
+  const updateText = "Eclipse: Dawn of Shadows Update Released! The latest update introduces new quests, powerful weapons, and an enhanced multiplayer mode for even more epic adventures. Players can now explore the mystical Crystal Caverns and face the formidable Ice Dragon!";
 
-  useEffect(() => {
-    gameService.getGameText().then(response => setGameText(response.data));
-    gameService.getUpdateText().then(response => setUpdateText(response.data));
-  }, []);
 
   return (
     <div className='news-container'>

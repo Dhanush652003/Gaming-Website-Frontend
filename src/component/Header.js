@@ -51,10 +51,10 @@ export default function ButtonAppBar() {
                 },
               }}
             >
-              <Link to = '/'><MenuItem>Home Page</MenuItem> </Link>
-              <Link to = '/about'><MenuItem>About us</MenuItem></Link>
-              <Link to = '/news'><MenuItem>News</MenuItem></Link>
-              <Link to = '/feedback'><MenuItem>Contact Us</MenuItem></Link>
+              <Link to = '/'><MenuItem sx={{color:'white', textDecoration:'none'}}>Home Page</MenuItem> </Link>
+              <Link to = '/about'><MenuItem sx={{color:'white', textDecoration:'none'}} >About us</MenuItem></Link>
+              <Link to = '/news'><MenuItem sx={{color:'white', textDecoration:'none'}}>News</MenuItem></Link>
+              <Link to = '/feedback'><MenuItem sx={{color:'white', textDecoration:'none'}}>Contact Us</MenuItem></Link>
             </Menu>
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
