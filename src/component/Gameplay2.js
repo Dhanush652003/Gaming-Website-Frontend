@@ -23,7 +23,8 @@ const Gameplay2 = () => {
     height: '280vh',
     width: '100%',
   };
-
+  const weapon = "Powerful weapons scattered across the map to arm players for intense battles in the battleground. Each gun offers unique advantages and strategies, enhancing the thrill of survival. Guns are the primary tools of engagement in our battle royale universe. From pistols to sniper rifles, each firearm offers a distinct advantage, catering to different playstyles and situations. Players scavenge for guns across the sprawling map, ensuring they are well-equipped for every encounter. With precise aiming and strategic weapon selection, victory can be seized amidst the chaos of battle."
+  const char = "Characters are the heart and soul of the action-packed narrative, each with their own unique backstory, abilities, and motivations. From seasoned warriors to enigmatic renegades, these diverse personalities bring depth and intrigue to the battlefield, shaping the course of epic confrontations. With every match, players embody these characters, immersing themselves in a world where skill, strategy, and survival instincts reign supreme. As they engage in fierce skirmishes and daring escapades, the characters evolve, leaving an indelible mark on the ever-evolving landscape of battle royale gaming."
     return (
       <div className="container-fluid text-white" style={divStyle}>
         <div className="row">
@@ -34,10 +35,10 @@ const Gameplay2 = () => {
           </div>
           <div className="col-12 text-start py-3">
             <div className="fw-bold" style={{ fontSize: '1.5rem' }}>
-              <FiberManualRecordIcon /> Guns
+              <FiberManualRecordIcon style={{marginTop:'-0.4%'}}/> Guns
             </div>
             <div className="text-white fw-bold mt-3 ms-4 me-3">
-              Powerful weapons scattered across the map to arm players for intense battles in the battleground. Each gun offers unique advantages and strategies, enhancing the thrill of survival. Guns are the primary tools of engagement in our battle royale universe. From pistols to sniper rifles, each firearm offers a distinct advantage, catering to different playstyles and situations. Players scavenge for guns across the sprawling map, ensuring they are well-equipped for every encounter. With precise aiming and strategic weapon selection, victory can be seized amidst the chaos of battle.
+              {weapon}
             </div>
           </div>
           <div className="row justify-content-center mt-3 mb-3">
@@ -60,10 +61,10 @@ const Gameplay2 = () => {
         </div>
         <div className="col-12 text-start py-3">
             <div className="fw-bold" style={{ fontSize: '1.5rem' }}>
-              <FiberManualRecordIcon /> Characters
+              <FiberManualRecordIcon style={{marginTop:'-0.4%'}} /> Characters
             </div>
             <div className="text-white fw-bold mt-3 ms-4 me-3">
-            Characters are the heart and soul of the action-packed narrative, each with their own unique backstory, abilities, and motivations. From seasoned warriors to enigmatic renegades, these diverse personalities bring depth and intrigue to the battlefield, shaping the course of epic confrontations. With every match, players embody these characters, immersing themselves in a world where skill, strategy, and survival instincts reign supreme. As they engage in fierce skirmishes and daring escapades, the characters evolve, leaving an indelible mark on the ever-evolving landscape of battle royale gaming.
+            {char}
             </div>
           </div>
           <div className="row justify-content-center mt-3 mb-3">
@@ -85,7 +86,7 @@ const Gameplay2 = () => {
           </div>
           <div className="row justify-content-center mt-3 mb-3">
           <div className="fw-bold" style={{ fontSize: '1.5rem' }}>
-             <FiberManualRecordIcon /> Sample Gameplay
+             <FiberManualRecordIcon style={{marginTop:'-0.4%'}} /> Sample Gameplay
          </div>
             <div className="col-md-12 text-center mt-5"> 
               <video autoPlay className="video-fluid">
