@@ -20,7 +20,7 @@ const Gameplay2 = () => {
   const divStyle = {
     backgroundImage: `url(${background})`,
     backgroundSize: 'cover',
-    height: '280vh',
+    height: 'auto',
     width: '100%',
   };
   const weapon = "Powerful weapons scattered across the map to arm players for intense battles in the battleground. Each gun offers unique advantages and strategies, enhancing the thrill of survival. Guns are the primary tools of engagement in our battle royale universe. From pistols to sniper rifles, each firearm offers a distinct advantage, catering to different playstyles and situations. Players scavenge for guns across the sprawling map, ensuring they are well-equipped for every encounter. With precise aiming and strategic weapon selection, victory can be seized amidst the chaos of battle."
@@ -95,7 +95,7 @@ const Gameplay2 = () => {
               </video>
             </div>
           </div>
-          <div className='mt-3 mb-5 col-12 text-center py-3'>
+          <div className='mt-3 col-12 text-center py-3'>
           <Link to ='/'>
         <Button variant="contained" className='bg-warning'>Home Page</Button>
         </Link>

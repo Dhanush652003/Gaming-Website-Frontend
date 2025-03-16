@@ -9,7 +9,7 @@ const Aboutus = () => {
   const divStyle = {
     backgroundImage: `url(${joystick})`,
     backgroundSize: 'cover',
-    height: '100vh',
+    height: '100%',
     width: '100%',
   };
 

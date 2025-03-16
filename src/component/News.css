@@ -33,12 +33,6 @@
     margin-bottom: 20px;
 }
 
-/* @media (max-width: 768px) {
-    .flex-md-row-reverse {
-        flex-direction: column-reverse;
-    }
-} */
-
 .news-container {
     display: flex;
     flex-direction: column;

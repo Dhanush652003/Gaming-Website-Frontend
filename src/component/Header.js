@@ -8,11 +8,12 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css'; 
 
 export default function ButtonAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const location = useLocation();
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -51,52 +52,64 @@ export default function ButtonAppBar() {
                 },
               }}
             >
-              <Link to = '/'><MenuItem sx={{color:'white', textDecoration:'none'}}>Home Page</MenuItem> </Link>
-              <Link to = '/about'><MenuItem sx={{color:'white', textDecoration:'none'}} >About us</MenuItem></Link>
-              <Link to = '/news'><MenuItem sx={{color:'white', textDecoration:'none'}}>News</MenuItem></Link>
-              <Link to = '/feedback'><MenuItem sx={{color:'white', textDecoration:'none'}}>Contact Us</MenuItem></Link>
+              <Link to='/'><MenuItem sx={{ color: location.pathname === '/' ? 'rgba(255, 157, 0,0.6)' : 'white', textDecoration: 'none' }}>Home Page</MenuItem></Link>
+              <Link to='/about'><MenuItem sx={{ color: location.pathname === '/about' ? 'rgba(255, 157, 0,0.6)' : 'white', textDecoration: 'none' }}>About us</MenuItem></Link>
+              <Link to='/news'><MenuItem sx={{ color: location.pathname === '/news' ? 'orargba(255, 157, 0,0.6)nge' : 'white', textDecoration: 'none' }}>News</MenuItem></Link>
+              <Link to='/feedback'><MenuItem sx={{ color: location.pathname === '/feedback' ? 'rgba(255, 157, 0,0.6)' : 'white', textDecoration: 'none' }}>Contact Us</MenuItem></Link>
             </Menu>
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-          <Link to ='/'>
-            <Button
-              className="button-hover" 
-              style={{
-                color:'white'
-              }}
-            >
-              Home Page
-            </Button>
+            <Link to='/'>
+              <Button
+                className="button-hover"
+                style={{
+                  color: 'white',
+                  marginRight: '5px',
+                  backgroundColor: location.pathname === '/' ? 'rgba(255, 157, 0,0.6)' : 'transparent',
+                  transition: 'background-color 0.3s ease'
+                }}
+              >
+                Home Page
+              </Button>
             </Link>
-            <Link to ='/about'>
-            <Button
-              className="button-hover" 
-              style={{
-                color:'white'
-              }}
-            >
-              About us
-            </Button>
+            <Link to='/about'>
+              <Button
+                className="button-hover"
+                style={{
+                  color: 'white',
+                  marginRight: '5px',
+                  backgroundColor: location.pathname === '/about' ? 'orgba(255, 157, 0,0.6)range' : 'transparent',
+                  transition: 'background-color 0.3s ease'
+                }}
+              >
+                About us
+              </Button>
             </Link>
-            <Link to ='/news'>
-            <Button
-              className="button-hover" 
-              style={{
-                color:'white'
-              }}
-            >
-              News
-            </Button>
+            <Link to='/news'>
+              <Button
+                className="button-hover"
+                style={{
+                  color: 'white',
+                  marginRight: '5px',
+                  backgroundColor: location.pathname === '/news' ? 'rgba(255, 157, 0,0.6)' : 'transparent',
+                  transition: 'background-color 0.3s ease'
+                }}
+              >
+                News
+              </Button>
             </Link>
             <Link to='/feedback'>
-            <Button
-              className="button-hover" 
-              style={{
-                color:'white'
-              }}
-            >
-              FeedBack
-            </Button>
+              <Button
+                className="button-hover"
+                style={{
+                  color: 'white',
+                  marginRight: '5px',
+                  backgroundColor: location.pathname === '/feedback' ? 'rgba(255, 157, 0,0.6)' : 'transparent',
+                  transition: 'background-color 0.3s ease'
+                }}
+              >
+                FeedBack
+              </Button>
             </Link>
           </Box>
         </Toolbar>
